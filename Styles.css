@@ -112,7 +112,6 @@ main .home {
 
 .home .text-info h1 span {
   color: #5dd62c;
-  
 }
 
 .home .text-info h1 span:hover {
@@ -280,7 +279,7 @@ main .skills {
 .skills .container .skills-content .skills-text-info {
   display: flex;
   flex-direction: column;
-  /* gap: 1rem; */
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
@@ -293,8 +292,6 @@ main .skills {
   line-height: 1.1;
   color: #f8f8f8;
   margin-bottom: 1rem;
-
-  
 }
 .skills .container .skills-content .skills-text-info p {
   text-align: center;
@@ -302,7 +299,7 @@ main .skills {
   font-weight: 400;
   line-height: 1.6;
   color: #f8f8f8;
-  
+  max-width: 500px;
 }
 .skills .container .skills-content .skills-text-info h2 span {
   color: #5dd62c;
