@@ -431,7 +431,7 @@ main .skills {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .header {
     display: none;
   }
