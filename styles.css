@@ -78,9 +78,7 @@ main .home {
 
 .container {
   width: 1110px;
-  width: 90%;
   margin-inline: auto;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +86,6 @@ main .home {
 
 .home .container .home-content {
   display: flex;
-
   gap: 1rem;
   align-items: center;
   justify-content: center;
@@ -312,7 +309,7 @@ main .skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  width: 85%;
+  width: 100%;
 }
 
 .skills .container .skills-content .skills-container .skill {
@@ -404,6 +401,10 @@ main .skills {
     display: none;
   }
 
+  .container {
+    width: 90%;
+  }
+
   /* home section */
 
   .home .container .home-content {
@@ -431,7 +432,7 @@ main .skills {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .header {
     display: none;
   }
