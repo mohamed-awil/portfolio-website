@@ -303,6 +303,7 @@ main .skills {
   padding-inline: 10px;
   padding-block: 5px;
   border-radius: 5px;
+  
 }
 
 .skills .container .skills-content .skills-container .skill .skill-title img {
@@ -421,7 +422,7 @@ main .projects {
   }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 425px) {
 
 
   .home .text-info h1 {
