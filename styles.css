@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-  /* border: 1px solid red; */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -97,21 +96,49 @@ main .home {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  justify-content: center;
 }
+
 .home .text-info h1 {
   font-size: 4rem;
   font-weight: 800;
   line-height: 1.1;
-  color: #f8f8f8;
+  background: linear-gradient(to right, #5dd62c, #f8f8f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #5dd62c;
+  animation:
+    typing 6s steps(11) infinite,
+    blink 0.7s infinite;
 }
 
-.home .text-info h1 span {
-  color: #5dd62c;
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  45% {
+    width: 11ch;
+  }
+  55% {
+    width: 11ch;
+  }
+  100% {
+    width: 0;
+  }
 }
 
-.home .text-info h1 span:hover {
-  color: #337418;
+@keyframes blink {
+  0%,
+  100% {
+    border-color: #5dd62c;
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .home .text-info h2 {
@@ -135,6 +162,7 @@ main .home {
 
 .home .text-info .btn-container a:nth-child(1):hover {
   background-color: #337418;
+  /* box-shadow: 0px 0px 8px 1px rgb(248, 248, 248); */
 }
 
 .home .text-info .btn-container a:nth-child(2) {
@@ -143,6 +171,7 @@ main .home {
 }
 .home .text-info .btn-container a:nth-child(2):hover {
   background-color: #202020;
+  box-shadow: 0px 0px 8px 1px rgb(93, 214, 44);
 }
 
 .btn-container {
@@ -156,6 +185,11 @@ main .home {
   margin-inline: auto;
   display: flex;
   justify-content: center;
+  box-shadow: 10px 10px 25px -10px rgb(93, 214, 44);
+}
+.home .container .home-content .profile-image:hover {
+  transform: scale(0.95);
+  box-shadow: 10px 10px 25px -5px rgb(93, 214, 44);
 }
 
 .home .container .home-content .profile-image img {
@@ -188,6 +222,11 @@ main .about {
   margin-inline: auto;
   display: flex;
   justify-content: center;
+  box-shadow: -10px 10px 25px -10px rgb(93, 214, 44);
+}
+.about .container .about-content .about-image:hover {
+  transform: scale(0.95);
+  box-shadow: -10px 10px 25px -5px rgb(93, 214, 44);
 }
 
 .about .container .about-content .about-image img {
@@ -208,27 +247,19 @@ main .about {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #f8f8f8;
   margin-bottom: 1rem;
-}
-.about .about-content .about-text-info h2 span {
-  color: #5dd62c;
-}
-.about .about-content .about-text-info h2 span:hover {
-  color: #337418;
+  background: linear-gradient(to right, #5dd62c, #f8f8f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about .about-content .about-text-info h3 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #f8f8f8;
-}
-
-.about .about-content .about-text-info h3 span {
-  color: #5dd62c;
-}
-.about .about-content .about-text-info h3 span:hover {
-  color: #337418;
+  /* background: linear-gradient(to right, #337418, #5dd62c, #f8f8f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .about .about-content .about-text-info p {
@@ -271,9 +302,12 @@ main .skills {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #f8f8f8;
   margin-bottom: 1rem;
+  background: linear-gradient(to right, #5dd62c, #f8f8f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 .skills .container .skills-content .skills-text-info p {
   text-align: center;
   font-size: 1rem;
@@ -281,12 +315,6 @@ main .skills {
   line-height: 1.6;
   color: #f8f8f8;
   max-width: 500px;
-}
-.skills .container .skills-content .skills-text-info h2 span {
-  color: #5dd62c;
-}
-.skills .container .skills-content .skills-text-info h2 span:hover {
-  color: #337418;
 }
 
 .skills .container .skills-content .skills-container {
@@ -303,11 +331,25 @@ main .skills {
   padding-inline: 10px;
   padding-block: 5px;
   border-radius: 5px;
-  
+  box-shadow: -8px 10px 25px -20px rgb(93, 214, 44);
+}
+
+.skills .container .skills-content .skills-container .skill:hover {
+  transform: scale(1.1);
 }
 
 .skills .container .skills-content .skills-container .skill .skill-title img {
   width: 50px;
+  animation: rotateImage 10s linear infinite;
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .skills .container .skills-content .skills-container .skill .skill-title {
@@ -344,6 +386,7 @@ main .skills {
 .skill .skill-percentage span:hover {
   color: #f8f8f8;
 }
+
 .skill .skill-percentage .html-p {
   height: 5px;
   width: 100%;
@@ -423,8 +466,6 @@ main .projects {
 }
 
 @media (max-width: 425px) {
-
-
   .home .text-info h1 {
     font-size: 3rem;
   }
@@ -436,7 +477,7 @@ main .projects {
     color: #f8f8f8;
   }
 
-.about .about-content .about-text-info h2 {
+  .about .about-content .about-text-info h2 {
     font-size: 3rem;
     font-weight: 700;
     line-height: 1.1;
@@ -445,6 +486,7 @@ main .projects {
 
   .about .about-content .about-text-info h3 {
     font-size: 2.25rem;
+    
   }
 
   .skills .container .skills-content .skills-container {
