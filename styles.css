@@ -111,24 +111,24 @@ main .home {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
-  width: 0;
+  /* width: 0;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid #5dd62c;
   animation:
-    typing 6s steps(12) infinite,
-    blink 0.7s infinite;
-}
+    typing 6s steps(11) infinite,
+    blink 0.7s infinite; */
+  }
 
 @keyframes typing {
   0% {
     width: 0;
   }
   45% {
-    width: 12ch;
+    width: 11ch;
   }
   55% {
-    width: 12ch;
+    width: 11ch;
   }
   100% {
     width: 0;
@@ -580,6 +580,7 @@ main .contact .container .contact-title {
 main .contact .container .contact-title h2 {
   font-size: 3rem;
   font-weight: 700;
+  text-align: center;
   line-height: 1.1;
   margin-bottom: 1rem;
   background: linear-gradient(to right, #5dd62c, #f8f8f8);
@@ -603,7 +604,8 @@ main .contact .contact-container {
   width: 100%;
   background-color: #202020;
   padding: 20px;
-  border-radius: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
   box-shadow: -8px 10px 25px -20px rgb(93, 214, 44);
 }
 main .contact .contact-container .contact-info {
@@ -613,6 +615,13 @@ main .contact .contact-container .contact-info {
   flex-direction: column;
   gap: 15px;
   justify-content: center;
+  border-right:2px solid transparent;
+  border-image:linear-gradient(
+      to bottom,
+      transparent,
+      #5dd62c,
+      transparent
+   ) 1;
 }
 main .contact .contact-container .contact-info h2 {
   font-size: 2rem;
@@ -637,7 +646,7 @@ main .contact .contact-container .contact-info .contact-item p {
   font-size: 1rem;
   line-height: 1.6;
   color: #f8f8f8;
-  font-weight: 300;
+  font-weight: 400;
 }
 main .contact .contact-container .contact-info .social-icons h3 {
   font-size: 1rem;
@@ -770,14 +779,32 @@ main .contact-form .send-btn:hover {
   /* contact sectoin */
   main .contact .contact-container .contact-info {
     align-items: center;
+    border-right: none;
+    border-bottom: 2px solid transparent ;
+    border-image:linear-gradient(
+      to right,
+      transparent,
+      #5dd62c,
+      transparent
+   ) 1;
   }
   main .contact .contact-container .contact-info .contact-items-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     margin-left: 120px;
+    /* text-align: center; */
   }
+
+  /* main .contact .contact-container .contact-info .contact-item {
+text-align: center;
+  } */
+
+  /* main .contact .contact-container .contact-info .contact-item p {
+
+    text-align: end;
+  } */
 
   main .contact .contact-container {
     flex-direction: column;
@@ -842,9 +869,24 @@ main .contact-form .send-btn:hover {
   }
 
   /* contact section */
+  main .contact .contact-container {
+    padding: 10px;
+  }
+  
   main .contact .contact-container .contact-info .contact-items-container {
     margin: 0;
+    padding: 10px;
   }
+
+  main .contact .contact-container .contact-info .contact-item p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #f8f8f8;
+  font-weight: 300;
+  letter-spacing: 0.0625rem;
+}
+
+
 }
 
 .whatsapp-float {
